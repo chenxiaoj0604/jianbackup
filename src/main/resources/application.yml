@@ -1,0 +1,39 @@
+backup-infos:
+  JIANHISInfos:
+    - BackupSourceFtp:
+        ip: 172.20.10.11
+        port: 21
+        username: ftpuser
+        password: ja890*()jkl
+      BackupTargetFtp:
+        ip: 172.20.10.119
+        port: 21
+        username: ftpuser
+        password: ja890*()jkl
+      fileNames:
+        - dfblzk0100_ja
+        - dfrun1200_ja
+        - dfrun2305_ja
+      suffix: .bak
+      saveDays: 10
+  JIANEMRInfos:
+    - BackupSourceFtp:
+        ip: 172.20.10.115
+        port: 21
+        username: ftpuser
+        password: ja890*()jkl
+      BackupTargetFtp:
+        ip: 172.20.10.119
+        port: 21
+        username: ftpuser
+        password: ja890*()jkl
+        dir: emr
+      fileNames:
+        - oracle
+      staticFileNames:
+        - oracle
+      saveDays: 10
+
+backuptiming:
+  backupJIANHISDataBase: 0 0 4 * * ?
+  backupJIANEMRDataBase: 0 0 4 * * ?
